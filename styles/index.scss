@@ -1,40 +1,47 @@
+$background-white: #FCFCFC;
+$background-black: #111319;
 $grey: #E8EEFF;
 $orange: #F7B354;
 $peach: #FFD6C2;
-$black: #000000;
+$black: #1A1A1A;
 $dark-grey: #4D4D4D;
 $blue: #CAEEFC;
 $green: #BCFBE3;
 $pink: #ECC4B3;
 $lightgrey: #B8D0DD;
+$dark-blue: #669DBA;
 
 html {
 	padding: 0;
 	margin: 0;
 	text-align: center;
 	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+	scroll-behavior: smooth;
 }
-a{
+.links{
 	text-decoration-line: none;
 	color: $grey;
 	margin: 0 10px;
+	font-size: 15px;
 }
-a:hover{
-	color: $orange;
+.links:hover{
+	color: $pink;
+	border-bottom: solid 2px $pink;
 }
 body{
 	padding: 0;
 	margin: 0;
 }
 header {
-	height:50px;
+	height:80px;
 	width: 90%;
-	background-color: $dark-grey;
+	background-color: $background-black;
 	display: flex;
 	align-items: center;
 	justify-content: left;
 	font-size: 15px;
 	padding: 0 5%;
+	border-bottom: solid 2.5px $grey;
 	h1 {
 		color: $grey;
 		font-size: 15px;
@@ -42,18 +49,24 @@ header {
 	}
 }
 #body{
-	height: 280px;
+	height: 200px;
 	width: 100%;
-	background-color: #FFFFFF;
+	background-color: $dark-blue;
 	display: flex;
 	justify-content: center;
 	font-size: 25px;
 	padding-top: 50px;
 }
+@media only screen and (max-width: 900px) {
+	#body{
+		height: 250px;
+	}
+}
 #title{
 	width: 80%;
-	height: 250px;
-	background-color: $green;
+	height: 100%;
+	color: $grey;
+	// background-color: $green;
 	p{
 		font-size: 15px;
 	}
@@ -61,6 +74,7 @@ header {
 #wrapper{
 	width: 100%;
 	position: relative;
+	background-color: $dark-blue;
 	#info{
 		width: 90%;
 		display: flex;
@@ -68,10 +82,12 @@ header {
 		align-items: center;
 		padding: 0 5%;
 		margin-bottom: 30px;
+		color: $grey;
 	}
 	img{
-		width: 70%;
+		width: 60%;
 		margin: 0 auto;
+		box-shadow: 5px 5px 10px #22546e;
 	}
 	#quote{
 		width: 90%;
@@ -82,17 +98,17 @@ header {
 		padding: 0 5%;
 		font-size: 20px;
 		font-weight: 900;
-		font-family: cursive;
-		color: $pink;
+		color: $grey;
 	}
 }
 #footer{
 	width: 100%;
 	height: 160px;
 	position: relative;
-	background-color: $lightgrey;
+	background-color: #FCDCA9;
 	text-align: center;
 	padding: 10px 0;
+	border-top: 3px solid $grey;
 	#logos{
 		width: 100%;
 		display: flex;
@@ -105,6 +121,7 @@ header {
 			background-image: url(../imgs/email.png);
 			background-size: contain;
 			background-repeat: no-repeat;
+			margin-right: 10px;
 		}
 		#link{
 			height: 42px;
@@ -112,6 +129,7 @@ header {
 			background-image: url(../imgs/link.png);
 			background-size: contain;
 			background-repeat: no-repeat;
+			margin-left: 10px;
 		}
 	}
 }
@@ -122,15 +140,18 @@ header {
 	height: 600px;
 	width: 100%;
 	text-align: center;
+	background-color: $background-white;
 	#profile{
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		flex-wrap: wrap;
 		width: 100%;
 		margin-top: 50px;
+		background-color: $background-white;
 		#me{
 			height: 100%;
-			width: 40%;
+			width: 250px;
 			text-align: left;
 			line-height: 12px;
 			font-family: Helvetica, sans-serif;
@@ -160,8 +181,24 @@ header {
 			height: 100%;
 			text-align: left;
 			font-size: 50px;
-			font-family: Helvetica, sans-serif;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 500;
 			line-height: 80px;
+		}
+	}
+}
+@media only screen and (max-width: 900px) {
+	#about-body {
+		height: 700px;
+		#profile{
+			#intro{
+				margin-top: 50px;
+				width: 90%;
+				padding: 0 5%;
+				text-align: center;
+				font-size: 24px;
+				line-height: 50px;
+			}
 		}
 	}
 }
@@ -195,6 +232,15 @@ header {
 	box-shadow: 30px 30px 0px #B8D0DD;
 }
 
+@media only screen and (max-width: 900px) {
+	#myinfo{
+		width: 100%;
+		height: 250px;
+		box-shadow: none;
+		left: 0;
+		top: 700px;
+	}
+}
 
 
 
