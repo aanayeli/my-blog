@@ -17,6 +17,7 @@ html {
 	text-align: center;
 	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 	scroll-behavior: smooth;
+	background-color: $background-white;
 }
 .links{
 	text-decoration-line: none;
@@ -31,6 +32,7 @@ html {
 body{
 	padding: 0;
 	margin: 0;
+	background-color: $background-white;
 }
 header {
 	height:80px;
@@ -258,13 +260,39 @@ header {
 }
 
 #blog-body{
-	height: 600px;
+	margin-top: 50px;
 	width: 90%;
 	padding: 0 5%;
+	margin-bottom: 20vh;
 	p{
-		margin-top: 50px;
+		
 		text-align: left;
 		text-indent: 50px;
+	}
+	h3{
+		margin-top: 80px;
+	}
+	h4{
+		text-align: left;
+	}
+	li{
+		text-align: left;
+	}
+	img{
+		width: 50%;
+		margin: 50px 0;
+	}
+}
+@media only screen and (max-width: 900px) {
+	#blog-body{
+		height: auto;
+		margin-bottom: 20vh;
+		p{
+			text-indent: 20px;
+		}
+		img{
+			width: 100%;
+		}
 	}
 }
 

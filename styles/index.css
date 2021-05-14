@@ -4,6 +4,7 @@ html {
   text-align: center;
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   scroll-behavior: smooth;
+  background-color: #FCFCFC;
 }
 
 .links {
@@ -21,6 +22,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  background-color: #FCFCFC;
 }
 
 header {
@@ -251,14 +253,40 @@ header h1 {
 }
 
 #blog-body {
-  height: 600px;
+  margin-top: 50px;
   width: 90%;
   padding: 0 5%;
+  margin-bottom: 20vh;
 }
 #blog-body p {
-  margin-top: 50px;
   text-align: left;
   text-indent: 50px;
+}
+#blog-body h3 {
+  margin-top: 80px;
+}
+#blog-body h4 {
+  text-align: left;
+}
+#blog-body li {
+  text-align: left;
+}
+#blog-body img {
+  width: 50%;
+  margin: 50px 0;
+}
+
+@media only screen and (max-width: 900px) {
+  #blog-body {
+    height: auto;
+    margin-bottom: 20vh;
+  }
+  #blog-body p {
+    text-indent: 20px;
+  }
+  #blog-body img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
